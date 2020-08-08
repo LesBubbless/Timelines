@@ -696,8 +696,6 @@ public class Main extends Application {
 
 //        loads all Scenes from FXML files, shows error if unsuccessful
         try {
-            baseScene = new Scene(FXMLLoader.load(getClass().getResource("windows/baseWindow.fxml")));
-            baseScene.setFill(Color.TRANSPARENT);
             mainScene = new Scene(FXMLLoader.load(getClass().getResource("windows/mainWindow.fxml")));
             mainScene.setFill(Color.TRANSPARENT);
             menuScene = new Scene(FXMLLoader.load(getClass().getResource("windows/menuWindow.fxml")));
