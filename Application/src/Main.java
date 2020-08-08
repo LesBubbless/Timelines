@@ -1,6 +1,5 @@
 
 import com.sun.javafx.css.Stylesheet;
-import com.sun.javafx.scene.control.skin.FXVK;
 import javafx.application.Application;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -16,7 +15,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -662,9 +660,7 @@ public class Main extends Application {
     public static Image logo;
     public static Scene baseScene, mainScene, menuScene, addEventScene, addTimelineScene;
     public static Stage window, errorWindow;
-    public static HBox bar;
-    public static Pane contentPane;
-    public static Button barClose, barMaximise, barMinimise;
+    public static Button mainBarClose, mainBarMaximise, mainBarMinimise, menuBarClose, menuBarMaximise, menuBarMinimise;
     public static Button exitButton, addTimelineButton, addEventButton, saveButton, deleteButton;
     public static Button cancelTimelineButton, cancelEventButton, confirmDeleteButton, cancelDeleteButton;
     public static Label messageLabel;
@@ -727,20 +723,6 @@ public class Main extends Application {
 //        window.getIcons().add(logo);
         window.initStyle(StageStyle.TRANSPARENT);
 
-//        binds window closing to save
-        window.setOnCloseRequest(event -> {
-            try {                               // if save is successful, window closes
-                app.saveToFile();
-                System.exit(0);
-            } catch (Exception exception) {     // if save fails, window stays open, the user is warned ...
-                event.consume();
-                showError("closing the application", exception.toString());
-                setMessage("Save-and-close disabled, closing the application will not save data.", true);
-            } finally {                         // ... and the save-on-close feature is disabled
-                window.setOnCloseRequest(event1 -> System.exit(0));
-            }
-        });
-
         window.show();
 
 //        creates a new App (back-end), attempts to load data from file, creates success / error user feedback
@@ -767,11 +749,21 @@ public class Main extends Application {
 
     void loadFXMLElements ()  {
         Parent menuRoot = menuScene.getRoot();
+        Parent mainRoot = mainScene.getRoot();
 
 //        all ScrollPanes
         mainPane = (ScrollPane) mainScene.getRoot().lookup("#main_scrollPane");
         menuPane = (ScrollPane) menuScene.getRoot().lookup("#menu_scrollPane");
         persistentPane = (ScrollPane) mainScene.getRoot().lookup("#main_persistentScrollPane");
+
+//        top bar controls
+        mainBarClose = (Button) mainRoot.lookup("#main_barClose");
+        mainBarMaximise = (Button) mainRoot.lookup("#main_barMaximise");
+        mainBarMinimise = (Button) mainRoot.lookup("#main_barMinimise");
+
+        menuBarClose = (Button) menuRoot.lookup("#menu_barClose");
+        menuBarMaximise = (Button) menuRoot.lookup("#menu_barMaximise");
+        menuBarMinimise = (Button) menuRoot.lookup("#menu_barMinimise");
 
 //        all Nodes in Menu
         messageLabel = (Label) menuRoot.lookup("#menu_messageLabel");
@@ -814,6 +806,32 @@ public class Main extends Application {
      */
 
     void createListeners () {
+
+//        mainPane top bar controls
+//        makes window closing conditional on saving
+        mainBarClose.setOnAction(event -> {
+            try {                               // if save is successful, window closes
+                app.saveToFile();
+                System.exit(0);
+            } catch (Exception exception) {     // if save fails, window stays open, the user is warned ...
+                event.consume();
+                showError("closing the application", exception.toString());
+                setMessage("Save-and-close disabled, closing the application will not save data.", true);
+            } finally {                         // ... and the save-on-close feature is disabled
+                window.setOnCloseRequest(event1 -> System.exit(0));
+            }
+        });
+        menuBarClose.setOnAction(mainBarClose.getOnAction());
+
+        mainBarMaximise.setOnAction(event -> {
+            window.setMaximized(!window.isMaximized());
+        });
+        menuBarMaximise.setOnAction(mainBarMaximise.getOnAction());
+
+        mainBarMinimise.setOnAction(event -> {
+            window.setIconified(true);
+        });
+        menuBarMinimise.setOnAction(mainBarMinimise.getOnAction());
 
 //        binds mainPane and persistentPane vertical scrolls -- they both scroll like one
         persistentPane.vvalueProperty().bind(mainPane.vvalueProperty());

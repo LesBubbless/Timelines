@@ -165,6 +165,28 @@ Buttons
     -fx-background-color: rgba(160, 0, 0, 0.5);
 }
 
+.barButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-opacity: 0.2;
+}
+
+.barButton:hover {
+    -fx-background-color: #cccccc;
+    -fx-opacity: 1;
+}
+
+.barExitButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-opacity: 0.2;
+}
+
+.barExitButton:hover {
+    -fx-background-color: rgba(160, 0, 0, 0.5);
+    -fx-opacity: 1;
+}
+
 /*
 TextFields
 */

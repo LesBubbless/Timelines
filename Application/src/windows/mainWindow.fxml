@@ -23,5 +23,41 @@
              </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="main_barClose" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="50.0" layoutY="50.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="barExitButton" stylesheets="@../stylesheet.css" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon-bar-close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="main_barMaximise" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="60.0" layoutY="60.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="barButton" stylesheets="@../stylesheet.css" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon-bar-maximise.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="main_barMinimise" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="60.0" layoutY="60.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="barButton" stylesheets="@../stylesheet.css" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon-bar-minimise.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
