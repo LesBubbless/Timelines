@@ -1,9 +1,6 @@
 # Timelines
 The Timelines viewer application is a tool for parallel visualisation of events. Primarily designed as a tool for History class.
 
-## Folder hierarchy
-The `Releases` directory contains the executable `.jar` files of all stable versions. The `Application/src` directory contains all source code.
-
 ## Controls
 ```
 MAIN WINDOW
