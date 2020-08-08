@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
+   <children>
+      <Label fx:id="event_addLabel" alignment="CENTER" layoutX="215.0" layoutY="20.0" styleClass="label" stylesheets="@../stylesheet.css" text="Create an Event" textFill="#3a3a3c" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="event_editLabel" alignment="CENTER" layoutX="215.0" layoutY="20.0" styleClass="label" stylesheets="@../stylesheet.css" text="Edit an Event" textFill="#3a3a3c" AnchorPane.topAnchor="20.0" visible="false" >
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="80.0" styleClass="label" stylesheets="@../stylesheet.css" text="Timeline" />
+      <ChoiceBox fx:id="event_timelineChoice" layoutX="211.0" layoutY="76.0" prefHeight="25.0" prefWidth="180.0" styleClass="choiceBox" stylesheets="@../stylesheet.css" />
+      <Label layoutX="154.0" layoutY="115.0" styleClass="label" stylesheets="@../stylesheet.css" text="Name" />
+      <TextField fx:id="event_nameField" layoutX="211.0" layoutY="110.0" prefHeight="27.0" prefWidth="180.0" promptText="Event name" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <Label layoutX="133.0" layoutY="150.0" styleClass="label" stylesheets="@../stylesheet.css" text="Start Date" />
+      <TextField fx:id="event_startDayField" layoutX="211.0" layoutY="145.0" prefHeight="27.0" prefWidth="45.0" promptText="DD" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <TextField fx:id="event_startMonthField" layoutX="263.0" layoutY="145.0" prefHeight="27.0" prefWidth="45.0" promptText="MM" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <TextField fx:id="event_startYearField" layoutX="315.0" layoutY="145.0" prefHeight="27.0" prefWidth="76.0" promptText="YYYY" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <Label layoutX="137.0" layoutY="185.0" styleClass="label" stylesheets="@../stylesheet.css" text="End Date" />
+      <TextField fx:id="event_endDayField" layoutX="211.0" layoutY="180.0" prefHeight="27.0" prefWidth="45.0" promptText="DD" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <TextField fx:id="event_endMonthField" layoutX="263.0" layoutY="180.0" prefHeight="27.0" prefWidth="45.0" promptText="MM" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <TextField fx:id="event_endYearField" layoutX="315.0" layoutY="180.0" prefHeight="27.0" prefWidth="76.0" promptText="YYYY" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <Label layoutX="152.0" layoutY="235.0" styleClass="label" stylesheets="@../stylesheet.css" text="Notes" />
+      <TextField fx:id="event_notesField" layoutX="211.0" layoutY="215.0" prefHeight="57.0" prefWidth="180.0" promptText="Notes" styleClass="textField" stylesheets="@../stylesheet.css" />
+      <Button fx:id="event_createButton" layoutX="255.0" layoutY="296.0" mnemonicParsing="false" onAction="#addEvent" styleClass="createButton" stylesheets="@../stylesheet.css" text="Create" />
+      <Button fx:id="event_editButton" layoutX="255.0" layoutY="296.0" mnemonicParsing="false" styleClass="createButton" stylesheets="@../stylesheet.css" text="Edit" visible="false" />
+   </children>
+</AnchorPane>

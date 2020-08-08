@@ -1,0 +1,306 @@
+/*
+Windows -- main AnchorPanes
+*/
+
+.window {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 10;
+}
+
+.windowBar {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10 10 0 0;
+    -fx-pref-height: 20;
+}
+
+.windowBar:hover {
+    -fx-background-color: #cccccc;
+}
+
+/*
+ScrollPane
+*/
+
+.scrollPane {
+    -fx-background-color: transparent;
+}
+
+.scrollPane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-height: 16;
+    -fx-pref-width: 16;
+}
+
+.scrollPane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scrollPane .scroll-bar .thumb {
+    -fx-background-color: #cccccc;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.scrollPane .scroll-bar .thumb:hover {
+    -fx-background-color: #777777;
+}
+
+.scrollPane .scroll-bar .increment-button {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.scrollPane .scroll-bar .increment-button .increment-arrow {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.scrollPane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.scrollPane .scroll-bar .decrement-button .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.scrollPane .corner {
+    -fx-background-color: transparent;
+}
+
+/*
+persistent ScrollPane
+*/
+
+.persistentScrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.persistentScrollPane .viewport {
+    -fx-background-color: transparent;
+}
+
+.persistentScrollPane .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-height: 16;
+    -fx-pref-width: 16;
+}
+
+.persistentScrollPane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.persistentScrollPane .scroll-bar .thumb {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.persistentScrollPane .scroll-bar .thumb:hover {
+    -fx-background-color: transparent;
+}
+
+.persistentScrollPane .scroll-bar .increment-button {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.persistentScrollPane .scroll-bar .increment-button .increment-arrow {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.persistentScrollPane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.persistentScrollPane .scroll-bar .decrement-button .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+}
+
+.persistentScrollPane .corner {
+    -fx-background-color: transparent;
+}
+
+/*
+Buttons
+*/
+
+.button {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 10;
+}
+
+.button:hover {
+    -fx-background-color: #777777;
+}
+
+.createButton {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 10;
+}
+
+.createButton:hover {
+    -fx-background-color: rgba(0, 160, 0, 0.5);
+}
+
+.exitButton {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 10;
+}
+
+.exitButton:hover {
+    -fx-background-color: rgba(160, 0, 0, 0.5);
+}
+
+/*
+TextFields
+*/
+
+.textField {
+    -fx-border-color: transparent;
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-text-fill: #3a3a3c;
+}
+
+.textField:focused {
+    -fx-border-color: #777777;
+}
+
+/*
+Labels
+*/
+
+.label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3a3a3c;
+}
+
+.messageLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #777777;
+}
+
+.nameLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.detailsLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #777777;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.notesLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-padding: 10;
+}
+
+/*
+CheckBoxes
+*/
+
+.menuCheckBox {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3a3a3c;
+    -fx-label-padding: 10;
+}
+
+.menuCheckBox .box {
+    -fx-background-color: #cccccc;
+}
+
+.menuCheckBox:selected .box {
+    -fx-background-color: #777777;
+}
+
+.menuCheckBox:selected .mark {
+    -fx-background-color: transparent;
+}
+
+.deleteCheckBox:selected .box {
+    -fx-background-color: rgba(160, 0, 0, 0.5);
+}
+
+/*
+ChoiceBoxes
+*/
+
+.choiceBox {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #3a3a3c;
+    -fx-mark-color: #3a3a3c;
+}
+
+.choiceBox .context-menu {
+    -fx-background-color: #cccccc;
+    -fx-padding: 5, 5, 5, 5;
+    -fx-border-radius: 10;
+}
+
+.choiceBox .menu-item > .label {
+    -fx-text-fill: #3a3a3c;
+    -fx-border-radius: 10;
+}
+
+.choiceBox .menu-item:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10;
+}
+
+/*
+Axis: Timeline
+ */
+
+.axisLine {
+    -fx-background-color: transparent;
+    -fx-stroke: #777777;
+    -fx-stroke-width: 16;
+    -fx-stroke-line-cap: round;
+}
+
+/*
+Marker: Events on Axis
+*/
+
+.marker {
+    -fx-background-color: transparent;
+    -fx-text-fill: #777777;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-padding: 0, 0, 0, 0;
+}
+
+.markerLine {
+    -fx-background-color: transparent;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 24;
+    -fx-stroke-line-cap: round;
+}
+
+.markerLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
